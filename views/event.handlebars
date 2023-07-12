@@ -1,0 +1,14 @@
+<!--loop through each event into a list with event name des -->
+<h1>Events</h1>
+<ul>
+  {{#each events}}
+    <li>
+      <h3>{{name}}</h3>
+      <p>{{description}}</p>
+      <p>Start Date: {{date_start}}</p>
+      <p>End Date: {{date_end}}</p>
+      <a href="/items/{{id}}">View Items</a>
+    </li>
+  {{/each}}
+</ul>
+
