@@ -1,2 +1,3 @@
-DROP DATABASE IF EXISTS volunteer_db;
-CREATE DATABASE volunteer_db;
+
+DROP DATABASE IF EXISTS ev_tracker_db;
+CREATE DATABASE ev_tracker_db;
