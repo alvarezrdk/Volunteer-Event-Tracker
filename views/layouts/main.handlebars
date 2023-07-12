@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
+  <title>Event Tracker!</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -14,17 +14,20 @@
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
         <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
+        <a href="/">Attend my Event!</a>
       </h1>
       <nav>
-        <!-- Conditionally render login or logout links -->
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/events">Events</a></li>
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/logout">Logout</a></li>
         {{else}}
-        <a href="/login">login</a>
+        <li><a href="/login">Login</a></li>
         {{/if}}
-      </nav>
+      </ul>
+    </nav>
     </header>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->

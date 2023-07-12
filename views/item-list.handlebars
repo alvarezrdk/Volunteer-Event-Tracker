@@ -1,0 +1,14 @@
+<h1>Items for {{event.name}}</h1>
+{{#if items.length}}
+  <ul class="item-list">
+    {{#each items}}
+      <li>
+        <h2>{{name}}</h2>
+        <p>{{description}}</p>
+        <p>Category: {{category}}</p>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No items available for {{event.name}}.</p>
+{{/if}}

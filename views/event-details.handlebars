@@ -1,0 +1,24 @@
+<h1>Event Details</h1>
+
+<div class="event-details">
+  <h2>{{event.name}}</h2>
+  <p>{{event.description}}</p>
+  <p>Start Date: {{formatDate event.date_start}}</p>
+  <p>End Date: {{formatDate event.date_end}}</p>
+  {{#if event.time_start}}
+    <p>Start Time: {{formatTime event.time_start}}</p>
+  {{/if}}
+  {{#if event.time_end}}
+    <p>End Time: {{formatTime event.time_end}}</p>
+  {{/if}}
+  <p>Location: {{event.location}}</p>
+</div>
+
+{{#if event.items.length}}
+  <h2>Items</h2>
+  <ul class="items-list">
+    {{#each event.items}}
+      <li>{{name}}</li>
+    {{/each}}
+  </ul>
+{{/if}}
