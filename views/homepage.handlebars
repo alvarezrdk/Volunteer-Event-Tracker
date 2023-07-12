@@ -1,4 +1,4 @@
-<!-- Loop over each object in the projects array -->
+<!-- Loop over each object in the events array -->
 {{#each events as |event| }}
 <div class="row mb-4 event">
   <div class="col-md-5">
@@ -9,8 +9,8 @@
     </h2>
     <p>
       <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount event.needed_volunteers}}</span>
+      <!-- Pass needed_volunteers value to the helper function -->
+      <span class="volunteer-amount">{{format_amount event.needed_volunteers}}</span>
       needed!
     </p>
     <p>Created by {{event.user.name}} on {{format_date event.date_created}}</p>
