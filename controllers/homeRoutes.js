@@ -6,12 +6,12 @@ router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const eventData = await events.findAll({
-      include: [
-        {
-          model: members,
-          attributes: ['name'],
-        },
-      ],
+      // include: [
+      //   {
+      //     model: events,
+      //     attributes: ['name'],
+      //   },
+      // ],
     });
 
     // Serialize data so the template can read it
@@ -78,5 +78,30 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+router.get('*', async (req,res) => {
+  try {
+    // Get all projects and JOIN with user data
+    const eventData = await events.findAll({
+      // include: [
+      //   {
+      //     model: events,
+      //     attributes: ['name'],
+      //   },
+      // ],
+    });
+
+    // Serialize data so the template can read it
+    const eventVar = eventData.map((event) => event.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('homepage', { 
+      eventVar, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 module.exports = router;
