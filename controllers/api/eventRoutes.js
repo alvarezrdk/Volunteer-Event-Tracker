@@ -2,11 +2,37 @@ const router = require('express').Router();
 const { events } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+
+router.get('/EventsList', async (req, res) => {
+  try {
+    // Get all projects and JOIN with user data
+    const eventData = await events.findAll({
+      include: [
+        {
+          model: events,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    // Serialize data so the template can read it
+    const eventVar = eventData.map((event) => event.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('event', { 
+      eventVar, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.post('/NewEvent', withAuth, async (req, res) => {
   try {
     const newEvent = await events.create({
       ...req.body,
-      user_id: req.session.user_id,
+      members_id: req.session.user_id,
     });
 
     res.status(200).json(newEvent);
@@ -25,7 +51,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     });
 
     if (!eventData) {
-      res.status(404).json({ message: 'No project found with this id!' });
+      res.status(404).json({ message: 'No event found with this id!' });
       return;
     }
 
