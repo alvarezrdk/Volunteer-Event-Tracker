@@ -1,0 +1,255 @@
+:root{
+    --lightblue: #C2DEDC;
+    --sand: #f3f2eb;
+    --lightbrown: #e2dacb;
+    --darkblue: #116A7B;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+header {
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    padding: 5em;
+    padding-top: 3em;
+    background-color: var(--sand);
+}
+
+header h1 {
+    width: 50%;
+    font-size: 40px;
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+}
+
+header ul {
+    width: 50%;
+    display: inline-flex;
+    justify-content: right;
+    margin:auto;
+}
+
+li {
+    list-style-type: none;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#headerSignUp {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+    background-color: var(--darkblue);
+    color: whitesmoke;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+/* This is for the Events Cards */
+
+#events {
+    background-color: var(--sand);
+    padding: 5em;
+}
+
+.upcomingEvent {
+    display: flex;
+    padding: 1em;
+}
+
+.eventImage {
+    position: relative;
+    flex: 1;
+}
+
+.eventImage img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.upcomingDateCard {
+    position: absolute;
+    padding-left: .5em;
+    padding-right: .5em;
+    top: 1em;
+    right: 1em;
+    background-color: var(--sand);
+    text-align: center;
+}
+
+.eventDescription {
+    flex: 2;
+    padding: 2em;
+    padding-top: 0;
+}
+
+.eventDescription h2 {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+}
+
+.eventDescription p {
+    padding: 1em;
+    font-weight: 300;
+    line-height: 2;
+}
+
+.eventJoin {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}
+
+/* This is for the Our Story Section*/
+
+#ourStory {
+    background-color: var(--sand);
+}
+
+#about{
+    display: flex;
+}
+
+#about p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 2;
+    font-size: 20px;
+}
+
+#joinNow {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+    background-color: var(--lightbrown);
+    color: black;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top: 3em;
+    width: fit-content;
+}
+
+#hoursLocation{
+    display: flex;
+}
+
+.thirdScreen {
+    padding: 5em;
+    flex: 1;
+}
+
+.twoThirdScreen {
+    padding: 5em;
+    flex: 2;
+}
+
+.sectionTitle {
+    text-align: right;
+}
+
+.sectionTitle h1 {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.hoursLocation p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 2;
+    font-size: 20px;
+}
+
+.hoursLocation h2 {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+/* This is for the footer*/
+
+footer {
+    background-color: var(--darkblue);
+    padding: 5em;
+    display: flex;
+    color: whitesmoke;
+}
+
+.footerCard {
+    flex: 1;
+}
+
+#contact p {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    font-weight: 300;
+}
+
+form {
+    padding: 1em;
+    width: 100%;
+    display: flex;
+}
+
+form input {
+    flex: 2;
+    padding: 1em;
+    border: none;
+    margin:.5em;
+}
+
+form button {
+    flex: 1;
+    padding: 1em;
+    border: none;
+    margin:.5em;
+    background-color: var(--lightblue);
+}
+
+#notification {
+    text-align: center;
+}
+
+#notification h1 {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+#socialsLogos {
+    width: 30%;
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+#socials h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.socialsLogo {
+    height: 30px;
+    width: 30px;
+    flex: 1;
+    object-fit: contain;
+}
+
+img {
+    object-fit: cover;
+}
