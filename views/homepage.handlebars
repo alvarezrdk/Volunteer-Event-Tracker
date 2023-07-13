@@ -5,7 +5,7 @@
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
-      <a href="/event/{{event.id}}">{{event.name}}</a>
+      <a href="/event/{{events.id}}">{{events.name}}</a>
     </h2>
     <p>
       <span for="img" aria-label="money">💲</span>
@@ -13,11 +13,11 @@
       <span class="volunteer-amount">{{format_amount event.needed_volunteers}}</span>
       needed!
     </p>
-    <p>Created by {{event.user.name}} on {{format_date event.date_created}}</p>
+    <p>Created by {{events.member.name}} on {{format_date event.date_created}}</p>
   </div>
   <div class="col-md-7">
     <p>
-      {{event.description}}
+      {{events.description}}
     </p>
   </div>
 </div>
