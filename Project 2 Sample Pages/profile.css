@@ -1,0 +1,196 @@
+:root{
+    --lightblue: #C2DEDC;
+    --sand: #f3f2eb;
+    --lightbrown: #e2dacb;
+    --darkblue: #116A7B;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+header {
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    padding: 5em;
+    padding-top: 3em;
+    background-color: var(--lightbrown);
+}
+
+header h1 {
+    width: 50%;
+    font-size: 40px;
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+}
+
+header ul {
+    width: 50%;
+    display: inline-flex;
+    justify-content: right;
+    margin:auto;
+}
+
+li {
+    list-style-type: none;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#headerSignUp {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+    background-color: var(--darkblue);
+    color: whitesmoke;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+/* This is for the Profile Section */
+
+#profile {
+    background-color: var(--sand);
+    padding: 5em;
+}
+
+.profileCategory {
+    height: min-content;
+    padding: 1em;
+}
+
+.profileCategory p {
+    padding: .5em;
+}
+
+#profilePersonal {
+    display: flex;
+}
+
+.profileItem {
+    flex: 1;
+}
+
+/* This is for the current volunteer events section */
+
+#profileEvents, #previousEvents {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.eventCard {
+    width: 25%;
+    padding-left: .5em;
+    padding-right: .5em;
+    position: relative;
+}
+
+.eventDateCard {
+    position: absolute;
+    padding-left: .5em;
+    padding-right: .5em;
+    top: 1em;
+    right: 1em;
+    background-color: var(--sand);
+    text-align: center;
+}
+
+.eventCard img {
+    width: 100%;
+    height: 200px;
+}
+
+.eventCard h1 {
+    font-family: "Arsenal", sans-serif;
+    font-size: 50px;
+}
+
+.eventCard h2 {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.eventCard h3 {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+/* This is for the footer*/
+
+footer {
+    background-color: var(--darkblue);
+    padding: 5em;
+    display: flex;
+    color: whitesmoke;
+}
+
+.footerCard {
+    flex: 1;
+}
+
+#contact p {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    font-weight: 300;
+}
+
+form {
+    padding: 1em;
+    width: 100%;
+    display: flex;
+}
+
+form input {
+    flex: 2;
+    padding: 1em;
+    border: none;
+    margin:.5em;
+}
+
+form button {
+    flex: 1;
+    padding: 1em;
+    border: none;
+    margin:.5em;
+    background-color: var(--lightblue);
+}
+
+#notification {
+    text-align: center;
+}
+
+#notification h1 {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+#socialsLogos {
+    width: 30%;
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+#socials h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.socialsLogo {
+    height: 30px;
+    width: 30px;
+    flex: 1;
+    object-fit: contain;
+}
+
+img {
+    object-fit: cover;
+}
