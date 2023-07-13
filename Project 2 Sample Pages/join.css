@@ -17,6 +17,7 @@ main {
     display: inline-flex;
     flex-wrap: wrap;
     padding: 5em;
+    padding-top: 3em;
     background-image: url(./Photos/joinVolunteer.jpg);
     height: 850px;
     background-size: cover;
@@ -59,6 +60,9 @@ li {
 #joinSection {
     margin-top: 10em;
     color: whitesmoke;
+}
+
+#joinSection h2 {
     font-weight: 300;
 }
 
