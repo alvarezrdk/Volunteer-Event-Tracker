@@ -34,7 +34,9 @@ events.init(
     time_end: {
       type: DataTypes.DATE,
     },
-    
+    picture: {
+      type: DataTypes.STRING,
+    },
   },
   {
     sequelize,
