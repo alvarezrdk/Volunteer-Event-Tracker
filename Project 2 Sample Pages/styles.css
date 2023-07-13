@@ -17,6 +17,7 @@ header {
     width: 100%;
     display: inline-flex;
     padding: 5em;
+    padding-top: 3em;
     background-color: var(--sand);
 }
 
@@ -44,7 +45,7 @@ li {
 
 #headerSignUp {
     font-family: 'Arsenal', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     background-color: var(--darkblue);
     color: whitesmoke;
     padding: 1em;
@@ -88,6 +89,11 @@ li {
     padding-left: 0;
 }
 
+#featureJoin {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}
 
 /* This is the Upcoming Events area*/
 
@@ -124,6 +130,16 @@ li {
     font-size: 50px;
 }
 
+.upcomingCard h2 {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.upcomingCard h3 {
+    font-size: 15px;
+    font-weight: 300;
+}
+
 #upcomingEventsLink {
     font-family: 'Arsenal', sans-serif;
     font-weight: 400;
@@ -136,15 +152,6 @@ li {
     padding-right: 2em;
 }
 
-.upcomingCard h2 {
-    font-size: 20px;
-    font-weight: 300;
-}
-
-.upcomingCard h3 {
-    font-size: 15px;
-    font-weight: 300;
-}
 
 /* This is the Quote Section*/
 
