@@ -27,20 +27,14 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/event/:id', async (req, res) => {
+router.get('/events/:id', async (req, res) => {
   try {
     const eventData = await events.findByPk(req.params.id, {
-      include: [
-        {
-          model: members,
-          attributes: ['name'],
-        },
-      ],
     });
 
     const eventVar = eventData.get({ plain: true });
 
-    res.render('project', {
+    res.render('event-details', {
       ...eventVar,
       logged_in: req.session.logged_in
     });
