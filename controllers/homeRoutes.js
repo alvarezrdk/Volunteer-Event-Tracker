@@ -37,6 +37,17 @@ router.get('/events/list', async (req, res) => {
     }
 });
 
+router.get('/events', async (req, res) => {
+  try {
+    const eventData = await events.findAll()
+    const eventList = eventData.map(event => event.get({plain: true}))
+    res.render("event-list", {
+      eventList, logged_in: req.session.logged_in
+    });
+} catch (error) {
+    res.status(500).json(error)
+}});
+
 router.get('/events/:id', async (req, res) => {
   try {
     const eventData = await events.findByPk(req.params.id, {
