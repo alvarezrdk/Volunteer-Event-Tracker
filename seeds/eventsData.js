@@ -7,7 +7,8 @@ const eventsData = [
     "date_start": "July 20, 2023",
     "date_end": "July 20, 2023",
     "time_start": "July 20, 2023",
-    "time_end": "July 20, 2023"
+    "time_end": "July 20, 2023",
+    "picture": "beach.png"
   },
 ]
 
