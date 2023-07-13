@@ -6,12 +6,6 @@ router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const eventData = await events.findAll({
-      // include: [
-      //   {
-      //     model: events,
-      //     attributes: ['name'],
-      //   },
-      // ],
     });
 
     // Serialize data so the template can read it
@@ -26,6 +20,33 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get('/events/list', async (req, res) => {
+  try {
+    // Get all events and JOIN with user data
+    const eventData = await events.findAll()
+    const eventsList = eventData.map(event => event.get({plain: true}))
+        res.render('event-list', {
+          eventsList,
+          logged_in: req.session.logged_in
+        });
+    } catch (error) {
+      console.log("error message")
+        console.log(error)
+      res.status(500).json(error)
+    }
+});
+
+router.get('/events', async (req, res) => {
+  try {
+    const eventData = await events.findAll()
+    const eventList = eventData.map(event => event.get({plain: true}))
+    res.render("event-list", {
+      eventList, logged_in: req.session.logged_in
+    });
+} catch (error) {
+    res.status(500).json(error)
+}});
 
 router.get('/events/:id', async (req, res) => {
   try {
