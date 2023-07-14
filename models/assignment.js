@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class assignment extends Model {}
+class Assignment extends Model {}
 
-assignment.init(
+Assignment.init(
   {
     event_id: {
       type: DataTypes.INTEGER,
@@ -22,8 +22,8 @@ assignment.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'assignment',
+    modelName: 'Assignment',
   }
 );
 
-module.exports = assignment;
+module.exports = Assignment;

@@ -1,4 +1,4 @@
-const { events } = require('../models');
+const { Events } = require('../models');
 
 const eventsData = [
   {
@@ -12,6 +12,6 @@ const eventsData = [
   },
 ]
 
-const seedEvents = () => events.bulkCreate(eventsData);
+const seedEvents = () => Events.bulkCreate(eventsData);
 
 module.exports = seedEvents;
