@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const eventVar = eventData.map((event) => Event.get({ plain: true }));
+    const eventVar = eventData.map((event) => event.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
 router.get('/events', async (req, res) => {
   try {
     // Get all events and JOIN with user data
-    const eventData = await events.findAll()
+    const eventData = await Events.findAll()
     const eventsList = eventData.map(event => event.get({plain: true}))
         res.render('event-list', {
           eventsList,
