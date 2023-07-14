@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { events, members } = require('../models');
+const { Events, Members } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
-    const eventData = await events.findAll({
+    const eventData = await Events.findAll({
       // include: [
       //   {
       //     model: events,
@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const eventVar = eventData.map((event) => event.get({ plain: true }));
+    const eventVar = eventData.map((event) => Event.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
 
 router.get('/events/:id', async (req, res) => {
   try {
-    const eventData = await events.findByPk(req.params.id, {
+    const eventData = await Events.findByPk(req.params.id, {
     });
 
     const eventVar = eventData.get({ plain: true });
@@ -47,9 +47,9 @@ router.get('/events/:id', async (req, res) => {
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const membersData = await members.findByPk(req.session.user_id, {
+    const membersData = await Members.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: events }],
+      include: [{ model: Events }],
     });
 
     const memberVar = memberData.get({ plain: true });
@@ -76,7 +76,7 @@ router.get('/login', (req, res) => {
 router.get('*', async (req,res) => {
   try {
     // Get all projects and JOIN with user data
-    const eventData = await events.findAll({
+    const eventData = await Events.findAll({
       // include: [
       //   {
       //     model: events,

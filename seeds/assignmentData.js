@@ -1,4 +1,4 @@
-const { assignment } = require('../models');
+const { Assignment } = require('../models');
 
 const assignmentData = [
   {
@@ -8,6 +8,6 @@ const assignmentData = [
   },
 ]
 
-const seedAssignment = () => assignment.bulkCreate(assignmentData);
+const seedAssignment = () => Assignment.bulkCreate(assignmentData);
 
 module.exports = seedAssignment;

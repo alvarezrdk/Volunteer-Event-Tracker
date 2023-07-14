@@ -1,15 +1,15 @@
-const assignment = require('./assignment');
-const events = require('./events');
-const items = require('./items');
-const members = require("./members");
+const Assignment = require('./Assignment');
+const Events = require('./Events');
+const Items = require('./items');
+const Members = require("./members");
 
-events.hasMany(assignment, {
+Events.hasMany(Assignment, {
   foreignKey: 'id',
   onDelete: 'CASCADE'
 });
 
-assignment.belongsTo(events, {
+Assignment.belongsTo(Events, {
   foreignKey: 'id'
 });
 
-module.exports = { assignment, events, members, items };
+module.exports = { Assignment, Events, Members, Items };
