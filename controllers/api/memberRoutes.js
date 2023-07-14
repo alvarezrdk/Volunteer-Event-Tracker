@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const { members } = require('../../models');
+const { Members } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    const memberData = await members.create(req.body);
+    const memberData = await Members.create(req.body);
 
     req.session.save(() => {
       req.session.id = memberData.id;
@@ -18,13 +18,18 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const memberData = await members.findOne({ where: { email: req.body.email } });
+    const memberData = await Members.findOne({ where: { email: req.body.email } });
+    const admin = memberData.map()
 
     if (!memberData) {
       res
         .status(400)
         .json({ message: 'Incorrect email or password, please try again' });
       return;
+    }
+
+    if (condition) {
+      
     }
 
     const validPassword = await memberData.checkPassword(req.body.password);
@@ -37,7 +42,7 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.user_id = memberData.id;
+      req.session.id = memberData.id;
       req.session.logged_in = true;
       
       res.json({ user: memberData, message: 'You are now logged in!' });
