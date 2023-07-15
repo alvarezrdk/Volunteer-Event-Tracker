@@ -1,6 +1,5 @@
 const Assignment = require('./Assignment');
 const Events = require('./Events');
-const Items = require('./items');
 const Members = require("./members");
 
 Events.hasMany(Assignment, {
@@ -12,4 +11,4 @@ Assignment.belongsTo(Events, {
   foreignKey: 'id'
 });
 
-module.exports = { Assignment, Events, Members, Items };
+module.exports = { Assignment, Events, Members};

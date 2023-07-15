@@ -54,7 +54,22 @@ const assignmentData = [
   {
     "event_id": "3",
     "member_id": "1",
-    "event_role": "Handing out canned "
+    "event_role": "Handing out canned goods"
+  },
+  {
+    "event_id": "3",
+    "member_id": "1",
+    "event_role": "Setting up tables"
+  },
+  {
+    "event_id": "3",
+    "member_id": "1",
+    "event_role": "Unload food from trucks"
+  },
+  {
+    "event_id": "3",
+    "member_id": "1",
+    "event_role": "Clean up crew"
   },
 ]
 
