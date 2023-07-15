@@ -19,17 +19,12 @@ router.post('/', async (req, res) => {
 router.post('/login', async (req, res) => {
   try {
     const memberData = await Members.findOne({ where: { email: req.body.email } });
-    const admin = memberData.map()
 
     if (!memberData) {
       res
         .status(400)
         .json({ message: 'Incorrect email or password, please try again' });
       return;
-    }
-
-    if (condition) {
-      
     }
 
     const validPassword = await memberData.checkPassword(req.body.password);
@@ -40,7 +35,7 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
-
+    
     req.session.save(() => {
       req.session.id = memberData.id;
       req.session.logged_in = true;
