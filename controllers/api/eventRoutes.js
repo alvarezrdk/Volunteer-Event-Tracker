@@ -1,10 +1,20 @@
 const router = require('express').Router();
-const { events } = require('../../models');
+const { Events, Members } = require('../../models');
+const checkIfAdmin = require('../../utils/admin');
 const withAuth = require('../../utils/auth');
 
-router.post('/newEvent', withAuth, async (req, res) => {
+router.post('/newEvent', withAuth, checkIfAdmin, async (req, res) => {
   try {
-    const newEvent = await events.create({
+    const admin = await Members.findOne({ where: { role: "admin" } });
+
+    if (!admin) {
+      res
+      .status(401)
+      .json({ message: 'Unauthorized Access' });
+    return;
+    }
+    
+    const newEvent = await Events.create({
       ...req.body,
       members_id: req.session.user_id,
     });
@@ -17,7 +27,7 @@ router.post('/newEvent', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const eventData = await events.destroy({
+    const eventData = await Events.destroy({
       where: {
         id: req.params.id,
         members_id: req.session.user_id,
