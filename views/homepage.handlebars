@@ -1,24 +1,103 @@
-<!-- Loop over each object in the events array -->
-{{#each events as |event| }}
-<div class="row mb-4 event">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/event/{{events.id}}">{{events.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_volunteers value to the helper function -->
-      <span class="volunteer-amount">{{format_amount event.needed_volunteers}}</span>
-      needed!
-    </p>
-    <p>Created by {{events.member.name}} on {{format_date event.date_created}}</p>
+<body>
+        <header>
+            <h1>Community Builders</h1>
+            <ul>
+                <li>
+                    Events
+                </li>
+                <li>
+                    Our Story
+                </li>
+                <li>
+                    Profile
+                </li>
+                <li id="headerSignUp">
+                    Sign Up
+                </li>
+            </ul>
+        </header>
+        <div id="feature">
+            <img id="featureImage" src="./Photos/Winery.jpg">
+            <div id="featureDescription">
+                <h2>
+                    Wine Tasting Event
+                </h2>
+                <p>
+                    Embark on a sensory journey of flavors and craftsmanship at our Wine Tasting Event, hosted by [Winery Name]. Explore exceptional vintages, guided by sommeliers, and uncover the art of winemaking while enjoying perfectly paired cheeses in our picturesque vineyard. Expand your wine knowledge and create lasting memories with us.
+                </p>
+                <h2 id="featureJoin">
+                    Join The Event ⟶
+                </h2>
+            </div>
+        </div>
+        <div id="upcoming">
+            <div class="upcomingCard">
+                <h1>Upcoming Events</h1>
+                <a id="upcomingEventsLink">View All</a>
+            </div>
+            <div class="upcomingCard">
+                <img src="./Photos/Greg Convention.jpg">
+                <div class="upcomingDateCard">
+                    <h2>JUL</h2>
+                    <h2>20</h2>
+                </div>
+                <h2>Greg Con</h2>
+                <h3>July 20th</h3>
+            </div>
+            <div class="upcomingCard">
+                <img src="./Photos/Alien Search.jpg">
+                <div class="upcomingDateCard">
+                    <h2>JUL</h2>
+                    <h2>23</h2>
+                </div>
+                <h2>Aliens Expo</h2>
+                <h3>July 23rd</h3>
+            </div>
+            <div class="upcomingCard">
+                <img src="./Photos/Beach Cleanup.jpg">
+                <div class="upcomingDateCard">
+                    <h2>JUL</h2>
+                    <h2>27</h2>
+                </div>
+                <h2>Beach Cleanup</h2>
+                <h3>July 27th</h3>
+            </div>
+        </div>
+        <div id="quote">
+            <h1>
+                "Volunteers are the unsung heroes who write love stories on the pages of people's lives."
+            </h1>
+            <h2>
+                — Aquila Veritas
+            </h2>
+        </div>
+        <div id="gallery">
+            <img src="/Photos/Volunteer 2.jpg">
+            <img src="./Photos/Volunteer 1.jpg">
+        </div>
+  <!-- Loop over each object in the events array -->
+  {{#each events as |event| }}
+  <div class="row mb-4 event">
+    <div class="col-md-5">
+      <h2>
+        <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+        {{{get_emoji}}}
+        <a href="/event/{{event.id}}">{{event.name}}</a>
+      </h2>
+      <p>
+        <span for="img" aria-label="money">💲</span>
+        <!-- Pass needed_volunteers value to the helper function -->
+        <span class="volunteer-amount">{{format_amount event.needed_volunteers}}</span>
+        needed!
+      </p>
+      <p>Created by {{event.member.name}} on {{format_date event.date_created}}</p>
+    </div>
+    <div class="col-md-7">
+      <p>
+        {{event.description}}
+      </p>
+    </div>
   </div>
-  <div class="col-md-7">
-    <p>
-      {{events.description}}
-    </p>
-  </div>
-</div>
-{{/each}}
+  {{/each}}
+        
+</body>
