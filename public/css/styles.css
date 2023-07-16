@@ -266,21 +266,31 @@ img {
 }
 
 /* Events list handlebar CSS*/
-/* #eventListDiv {
+#eventListDiv {
 height: auto;
 display: flex;
-display: block;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+background-color: var(--lightbrown);
 }
 
 .FullListImgs {
-padding-left: 10%;
-flex: 1;
-height: 500px;
+height: 400px;
+width:fit-content;
+padding-bottom: 1%;
+padding-top: 1%;
 }
 
 #eventDetailsText {
-padding-left: 10%;
 padding-bottom: 2%;
-display: flex;
-display: inline;
-} */
+padding-left: 1%;
+flex-wrap: wrap;
+font-size: 20px;
+}
+
+#allEventPageTitles {
+background-color: var(--lightbrown);
+padding-left: 24%;
+padding-top: 2%;
+}
