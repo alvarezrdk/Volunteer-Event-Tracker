@@ -8,25 +8,32 @@
         <title>Community Builders</title>
     </head>
 <body>
-      <header>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/events">Events</a></li>
-        {{#if logged_in}}
-        <li><a href="/profile">Profile</a></li>
-        <li><a href="/logout">Logout</a></li>
-        {{else}}
-        <li><a href="/login">Login</a></li>
-        {{/if}}
-      </ul>
-    </header>
-    <main class="container container-fluid mt-5">
+ <header>
+            <h1>Community Builders</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li>
+                   <a href="/events">Events</a>
+                </li>
+                <li>
+                    <a href=""> Our Story</a>
+                </li>
+            {{#if logged_in}}
+                <li><a href="/profile">Profile</a></li>
+                 <li><a href="/logout">Logout</a></li>
+            {{else}}
+                <li><a href="/login">Login</a></li>
+            {{/if}}
+                <li id="headerSignUp">
+                    Sign Up
+                </li>
+            </ul>
+        </header>
+    <main class="">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
-    <footer>
-      
-    </footer>
+   
   </div>
 
   <!-- Render script for logged in users only -->
