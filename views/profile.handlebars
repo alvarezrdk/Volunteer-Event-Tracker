@@ -1,84 +1,56 @@
 
-    <h2>Welcome, {{name}}!</h2>
-<div id="profile">
+ <h2>Welcome, {{name}}!</h2>
+    <div id="profile">
             <h1>Profile</h1>
             <div class="profileCategory" id="profilePersonal">
                 <div class="profileItem">
                     <h2>Name</h2>
-                    <p>Greg McGregson</p>
+                     <p>{{personalInfo.name}}</p>
                 </div>
                 <div class="profileItem">
                     <h2>Date of Birth</h2>
-                    <p>July 13th, 1990</p>
+                    <p>{{personalInfo.dateOfBirth}}</p>
                 </div>
                 <div class="profileItem">
                     <h2>Total Hours</h2>
-                    <p> 78 hours</p>
+                    <p>{{personalInfo.totalHours}} hours</p>
                 </div>
                 <div class="profileItem">
                     <h2>Contact Info</h2>
-                    <p>(999) 999 - 9999</p>
-                    <p>example@email.com</p>
+                    <p>{{personalInfo.phoneNumber}}</p>
+                    <p>{{personalInfo.email}}</p>
                 </div>
             </div>
+            {{#if currentEvents.length}}
             <h1>Current Volunteer Events</h1>
             <div class="profileCategory" id="profileEvents">
-                <div class="eventCard">
-                    <img src="./Photos/Greg Convention.jpg">
-                    <div class="eventDateCard">
-                        <h2>JUL</h2>
-                        <h2>20</h2>
+                {{#each currentEvents as |event|}}
+                    <div class="eventCard">
+                        <img src="{{event.image}}">
+                        <div class="eventDateCard">
+                         <h2>{{event.name}}</h2>
+                         <h2>{{event.day}}</h2>
+                         <h2>{{event.month}}</h2>
+                         <h3>{{event.date}}</h3>
                     </div>
-                    <h2>Greg Con</h2>
-                    <h3>July 20th</h3>
-                </div>
-                <div class="eventCard">
-                    <img src="./Photos/Beach Cleanup.jpg">
-                    <div class="eventDateCard">
-                        <h2>JUL</h2>
-                        <h2>27</h2>
-                    </div>
-                    <h2>Beach Cleanup</h2>
-                    <h3>July 27th</h3>
-                </div>
+                 {{/each}}  
             </div>
+            {{/if}}
+            {{#if pastEvents.length}}
             <h1>Past Volunteer Events</h1>
             <div class="profileCategory" id="previousEvents">
+                {{#each pastEvents as |event|}}
                 <div class="eventCard">
-                    <img src="./Photos/Greg Convention.jpg">
+                    <img src="{{event.image}}">
                     <div class="eventDateCard">
-                        <h2>JUL</h2>
-                        <h2>20</h2>
+                        <h2>{{event.name}}</h2>
+                        <h2>{{event.date}}</h2>
                     </div>
-                    <h2>Greg Con</h2>
-                    <h3>July 20th</h3>
+                        <h2>{{event.month}}</h2>
+                        <h3>{{event.day}}</h3>
                 </div>
-                <div class="eventCard">
-                    <img src="./Photos/Beach Cleanup.jpg">
-                    <div class="eventDateCard">
-                        <h2>JUL</h2>
-                        <h2>27</h2>
-                    </div>
-                    <h2>Beach Cleanup</h2>
-                    <h3>July 27th</h3>
-                </div>
+                {{/each}}
             </div>
-        </div>
-
-
-  {{#if events.length}}
-  <div class="event-list">
-    <h3>Current Events:</h3>
-
-    {{#each events as |event|}}
-        <h4><a href="/event/{{event.id}}">{{event.name}}</a></h4>
-      </div>
-      <div>
-        <button data-id="{{event.id}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/if}}
-</div>
-<script src="./js/profile.js"></script>
+            {{/if}}
+            
+<script src="/js/profile.js"></script>
