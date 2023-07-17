@@ -12,4 +12,4 @@ Assignment.belongsTo(Events, {
   foreignKey: 'id'
 });
 
-module.exports = { Assignment, Events, Members, Items };
+module.exports = { Assignment, Events, Members};

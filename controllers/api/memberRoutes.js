@@ -25,7 +25,9 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res) => {
   try {
     const memberData = await Members.findOne({ where: { email: req.body.email } });
+
     console.log(memberData.first_name);
+
     if (!memberData) {
       res
         .status(400)
