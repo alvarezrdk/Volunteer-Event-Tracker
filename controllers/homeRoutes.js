@@ -22,6 +22,27 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/ourstory', async (req, res) => {
+  try {
+    // Get all projects and JOIN with user data
+
+    const eventData = await Events.findAll({
+    });
+
+    // Serialize data so the template can read it
+    const eventVar = eventData.map((event) => event.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('ourStory', { 
+      eventVar, 
+      logged_in: req.session.logged_in,
+      whiteheader: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 router.get('/events', async (req, res) => {
   try {
     // Get all events and JOIN with user data
