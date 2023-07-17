@@ -1,4 +1,4 @@
-:root{
+:root {
     --lightblue: #C2DEDC;
     --sand: #f3f2eb;
     --lightbrown: #e2dacb;
@@ -18,21 +18,34 @@ header {
     display: inline-flex;
     padding: 5em;
     padding-top: 3em;
-    background-color: var(--sand);
+    background-color: none;
+}
+
+.whiteText {
+    color: whitesmoke;
+}
+
+#companyTitle {
+    width: 50%;
+}
+
+#companyTitle a {
+    display: inline-block;
+    width: fit-content;
 }
 
 header h1 {
-    width: 50%;
     font-size: 40px;
     font-family: 'Arsenal', sans-serif;
     font-weight: 700;
+    width: fit-content;
 }
 
 header ul {
     width: 50%;
     display: inline-flex;
     justify-content: right;
-    margin:auto;
+    margin: auto;
 }
 
 li {
@@ -43,22 +56,42 @@ li {
     margin-bottom: auto;
 }
 
+/* unvisited link */
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: black;
+    text-decoration: none;
+}
+
+.zoom {
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
 #headerSignUp {
-    font-family: 'Arsenal', sans-serif;
-    font-weight: 700;
-    background-color: var(--darkblue);
-    color: whitesmoke;
+    background-color: var(--lightbrown);
+    color: black;
     padding: 1em;
     padding-left: 2em;
     padding-right: 2em;
 }
 
-/* This is main feature area*/
+#headerSignUp a {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+}
 
 #feature {
     height: 700px;
     display: flex;
     padding: 5em;
+    padding-top: 17em;
+    margin-top: -12em;
     background-color: var(--sand);
 }
 
@@ -95,8 +128,6 @@ li {
     text-underline-offset: 5px;
 }
 
-/* This is the Upcoming Events area*/
-
 #upcoming {
     background-color: var(--lightbrown);
     display: flex;
@@ -118,6 +149,11 @@ li {
     right: 1em;
     background-color: var(--sand);
     text-align: center;
+}
+
+.upcomingDateCard h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 .upcomingCard img {
@@ -152,9 +188,6 @@ li {
     padding-right: 2em;
 }
 
-
-/* This is the Quote Section*/
-
 #quote {
     background-color: var(--darkblue);
     padding: 5em;
@@ -174,8 +207,6 @@ li {
     font-weight: 300;
 }
 
-/* This is for the Gallery Section*/
-
 #gallery {
     display: flex;
     width: 100%;
@@ -185,8 +216,6 @@ li {
     flex: 1;
     width: 50%;
 }
-
-/* This is for the footer*/
 
 footer {
     background-color: var(--darkblue);
@@ -213,18 +242,18 @@ form {
 }
 
 form input {
-flex: 2;
-padding: 1em;
-border: none;
-margin:.5em;
+    flex: 2;
+    padding: 1em;
+    border: none;
+    margin: .5em;
 }
 
 form button {
-flex: 1;
-padding: 1em;
-border: none;
-margin:.5em;
-background-color: var(--lightblue);
+    flex: 1;
+    padding: 1em;
+    border: none;
+    margin: .5em;
+    background-color: var(--lightblue);
 }
 
 #notification {
@@ -265,32 +294,309 @@ img {
     object-fit: cover;
 }
 
+#profile {
+    background-color: var(--sand);
+    padding: 5em;
+}
+
+.profileCategory {
+    height: min-content;
+    padding: 1em;
+}
+
+.profileCategory p {
+    padding: .5em;
+}
+
+#profilePersonal {
+    display: flex;
+}
+
+.profileItem {
+    flex: 1;
+}
+
+#profileEvents,
+#previousEvents {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.eventCard {
+    width: 25%;
+    padding-left: .5em;
+    padding-right: .5em;
+    position: relative;
+}
+
+.eventDateCard {
+    position: absolute;
+    padding-left: .5em;
+    padding-right: .5em;
+    top: 1em;
+    right: 1em;
+    background-color: var(--sand);
+    text-align: center;
+}
+
+.eventCard img {
+    width: 100%;
+    height: 200px;
+}
+
+.eventCard h1 {
+    font-family: "Arsenal", sans-serif;
+    font-size: 50px;
+}
+
+.eventCard h2 {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.eventCard h3 {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.currentTab {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}
+
+#aboutSection {
+    margin-top: 5em;
+    color: whitesmoke;
+    background-image: url(../Photos/aboutVolunteer.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 5em;
+    padding-top: 12em;
+    margin-top: -12em;
+}
+
+#aboutSection h2 {
+    font-weight: 300;
+}
+
+#aboutDescription {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 1.5;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#ourStory {
+    background-color: var(--sand);
+}
+
+#about {
+    display: flex;
+}
+
+#about p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 2;
+    font-size: 20px;
+}
+
+#joinNowAbout {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+    background-color: var(--lightbrown);
+    color: black;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top: 3em;
+    width: fit-content;
+}
+
+#hoursLocation {
+    display: flex;
+}
+
+.thirdScreen {
+    padding: 5em;
+    flex: 1;
+}
+
+.twoThirdScreen {
+    padding: 5em;
+    flex: 2;
+}
+
+.sectionTitle {
+    text-align: right;
+}
+
+.sectionTitle h1 {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.hoursLocation p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 2;
+    font-size: 20px;
+}
+
+.hoursLocation h2 {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+#mainJoinVolunteer {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 5em;
+    padding-top: 3em;
+    background-image: url(./Photos/joinVolunteer.jpg);
+    height: 850px;
+    background-size: cover;
+}
+
+#mainJoinVolunteer h1 {
+    width: 50%;
+    font-size: 40px;
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+}
+
+#mainJoinVolunteer ul {
+    width: 50%;
+    display: inline-flex;
+    justify-content: right;
+    height: min-content;
+}
+
+#headerSignUpWhite {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+    background-color: var(--darkblue);
+    color: whitesmoke;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#joinSection {
+    margin-top: 10em;
+    color: whitesmoke;
+}
+
+#joinSection h2 {
+    font-weight: 300;
+}
+
+#joinDescription {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 1.5;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#joinNow {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+    background-color: var(--lightbrown);
+    color: black;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    width: fit-content;
+}
+
+#events {
+    background-color: var(--sand);
+    padding: 5em;
+    padding-top: 17em;
+    margin-top: -12em;
+}
+
+.upcomingEvent {
+    display: flex;
+    padding: 1em;
+}
+
+.eventImage {
+    position: relative;
+    flex: 1;
+}
+
+.eventImage img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.eventDescription {
+    flex: 2;
+    padding: 2em;
+    padding-top: 0;
+}
+
+.eventDescription h2 {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+}
+
+.eventDescription p {
+    padding: 1em;
+    font-weight: 300;
+    line-height: 2;
+}
+
+.eventJoin {
+    font-size: 20px;
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+    background: none;
+    border: none;
+}
+
 /* Events list handlebar CSS*/
 #eventListDiv {
-height: auto;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-wrap: wrap;
-background-color: var(--lightbrown);
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--lightbrown);
 }
 
 .FullListImgs {
-height: 400px;
-width:fit-content;
-padding-bottom: 1%;
-padding-top: 1%;
+    height: 400px;
+    width: fit-content;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 
 #eventDetailsText {
-padding-bottom: 2%;
-padding-left: 1%;
-flex-wrap: wrap;
-font-size: 20px;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    flex-wrap: wrap;
+    font-size: 20px;
 }
 
 #allEventPageTitles {
-background-color: var(--lightbrown);
-padding-left: 24%;
-padding-top: 2%;
+    background-color: var(--lightbrown);
+    padding-left: 24%;
+    padding-top: 2%;
 }

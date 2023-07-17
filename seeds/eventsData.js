@@ -8,7 +8,7 @@ const eventsData = [
     "date_end": "July 20, 2023",
     "time_start": "July 20, 2023",
     "time_end": "July 20, 2023",
-    "picture": "cleaning_1.png"
+    "picture": "Beach Cleanup.jpg"
   },
   {
     "name": "High School Prom",
