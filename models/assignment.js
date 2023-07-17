@@ -8,13 +8,17 @@ Assignment.init(
     event_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: "Events"}
     },
     member_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: "Members"}
     },
-    items_id: {
-      type: DataTypes.INTEGER,
+    event_role: {
+      type: DataTypes.STRING,
     },
   },
   {
