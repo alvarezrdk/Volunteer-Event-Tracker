@@ -3,7 +3,7 @@ const { Events, Members } = require('../../models');
 const checkIfAdmin = require('../../utils/admin');
 const withAuth = require('../../utils/auth');
 
-router.post('/newEvent', withAuth, checkIfAdmin, async (req, res) => {
+router.post('/', withAuth, checkIfAdmin, async (req, res) => {
   try {
     const admin = await Members.findOne({ where: { role: "admin" } });
 

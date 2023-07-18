@@ -7,7 +7,8 @@ const membersData = [
     "dob": "03/09/1952",
     "gender": "Male",
     "email": "carroz@hotmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "role": "admin"
   }
 ];
 
