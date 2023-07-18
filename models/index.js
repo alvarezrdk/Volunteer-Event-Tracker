@@ -1,6 +1,6 @@
 const Assignment = require('./Assignment');
 const Events = require('./Events');
-const Members = require("./Members");
+const Members = require("./members");
 
 Events.hasMany(Assignment, {
   foreignKey: 'event_id',
