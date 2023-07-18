@@ -1,14 +1,20 @@
-<!--loop through each event into a list with event name des... this handlebars is for upcoming events. -->
+<!--loop through each event into a list with event name des... this handlebars is for new events. -->
   <div id="events">
     <h1>Upcoming Events</h1>
       <ul>
         {{#each events}}
           <li>
-            <h3>{{name}}</h3>
-            <p>{{description}}</p>
+        <div class="form-group">
+        <label for="name-signup">Event name:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+              <div class="form-group">
+        <label for="event-des">description:</label>
+        <input class="form-input" type="text" id="event-des" />
+      </div>
             <p>Start Date: {{date_start}}</p>
             <p>End Date: {{date_end}}</p>
-            <a href="/items/{{id}}">View Items</a>
+            
         </li>
       {{/each}}
       </ul>
