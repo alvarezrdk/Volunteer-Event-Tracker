@@ -1,22 +1,23 @@
-<!--loop through each event into a list with event name des... this handlebars is for new events. -->
-  <div id="events">
-    <h1>Upcoming Events</h1>
-      <ul>
-        {{#each events}}
-          <li>
-        <div class="form-group">
-        <label for="name-signup">Event name:</label>
-        <input class="form-input" type="text" id="name-signup" />
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Event:</h3>
+
+    <form class="form new-project-form">
+      <div class="form-group">
+        <label for="project-name">Event Name:</label>
+        <input class="form-input" type="text" id="event-name" name="event-name" />
       </div>
-              <div class="form-group">
-        <label for="event-des">description:</label>
-        <input class="form-input" type="text" id="event-des" />
+      <div class="form-group">
+        <label for="project-name">Event Description:</label>
+        <input class="form-input" type="text" id="event-desc" name="event-desc" />
       </div>
-            <p>Start Date: {{date_start}}</p>
-            <p>End Date: {{date_end}}</p>
-            
-        </li>
-      {{/each}}
-      </ul>
+      <div class="form-group">
+        <label for="project-name">Event Date:</label>
+        <input class="form-input" type="text" id="event-date" name="event-date" />
+      </div>
+     <div class="form-group">
+        <label for="project-name">Event Time:</label>
+        <input class="form-input" type="text" id="project-time" name="event-time" />
+      </div>
   </div>
    
