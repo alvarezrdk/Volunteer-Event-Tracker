@@ -4,8 +4,8 @@
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
+<div class="">
+  <div class="">
     <h3>Create a New Member:</h3>
 
     <form class="form new-member-form">
@@ -32,17 +32,17 @@
     </form>
   </div>
 
-  {{#if members.length}}
+  {{#if memberData.length}}
   <div class="member-list">
     <h3>Current Members:</h3>
 
-    {{#each members as |member|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
+    {{#each memberData as |member|}}
+    <div class="">
+      <div class="">
         <h4>{{member.first_name}} {{member.last_name}}</h4>
       </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{member.id}}">DELETE</button>
+      <div class="">
+        <button class="btn btn-sm btn-danger" data-id="{{memberData.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}

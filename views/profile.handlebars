@@ -5,20 +5,20 @@
             <div class="profileCategory" id="profilePersonal">
                 <div class="profileItem">
                     <h2>Name</h2>
-                     <p>{{personalInfo.name}}</p>
+                     <p>{{memberData.first_name}} {{memberData.last_name}}</p>
                 </div>
                 <div class="profileItem">
                     <h2>Date of Birth</h2>
-                    <p>{{personalInfo.dateOfBirth}}</p>
+                    <p>{{memberData.dateOfBirth}}</p>
                 </div>
                 <div class="profileItem">
                     <h2>Total Hours</h2>
-                    <p>{{personalInfo.totalHours}} hours</p>
+                    <p>{{memberData.totalHours}} hours</p>
                 </div>
                 <div class="profileItem">
                     <h2>Contact Info</h2>
-                    <p>{{personalInfo.phoneNumber}}</p>
-                    <p>{{personalInfo.email}}</p>
+                    <p>{{memberData.phoneNumber}}</p>
+                    <p>{{memberData.email}}</p>
                 </div>
             </div>
             {{#if currentEvents.length}}
