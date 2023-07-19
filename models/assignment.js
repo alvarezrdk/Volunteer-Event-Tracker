@@ -6,13 +6,13 @@ class Assignment extends Model {}
 Assignment.init(
   {
     event_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       references: {
         model: "Events"}
     },
     member_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       references: {
         model: "Members"}

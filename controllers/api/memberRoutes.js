@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Members } = require('../../models');
 
+
 router.post('/register', async (req, res) => {
   try {
     const dbmemberData = await Members.create({
@@ -12,6 +13,7 @@ router.post('/register', async (req, res) => {
 
     const memberData = await Members.findOne({where: { email: req.body.email}});
 
+      memberId = memberData.id;
       req.session.save(() => {
       req.session.logged_in = true;
       req.session.memberID = memberData.id;
@@ -24,9 +26,11 @@ router.post('/register', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
+    
     const memberData = await Members.findOne({ where: { email: req.body.email } });
 
     console.log(memberData.first_name);
+    console.log(memberData.id);
 
     if (!memberData) {
       res
@@ -67,4 +71,6 @@ router.post('/logout', (req, res) => {
   }
 });
 
+
 module.exports = router;
+
