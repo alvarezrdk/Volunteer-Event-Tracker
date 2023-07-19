@@ -601,6 +601,25 @@ img {
     padding-top: 2%;
 }
 
+.featureJoinButton{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+    background: var(--sand);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    padding-top: 1em;
+}
+
+#featureDescription h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
 /* Create Event Page element IDs */
 #event-name {
 
