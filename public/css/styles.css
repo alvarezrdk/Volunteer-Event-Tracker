@@ -622,17 +622,28 @@ img {
 
 /* Create Event Page element IDs */
 #event-name {
-
 }
 
 #event-desc {
-
 }
 
-#event-date {
-
+#event-start-date {
 }
 
-#event-time {
-    
+#event-end-date {
+}
+
+#event-start-time {
+}
+
+#event-end-time {
+}
+
+#event-img {
+}
+
+.event-submit-btn {
+}
+
+.event-remove-btn {
 }

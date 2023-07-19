@@ -5,15 +5,6 @@ const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, checkIfAdmin, async (req, res) => {
   try {
-    const admin = await Members.findOne({ where: { role: "admin" } });
-
-    if (!admin) {
-      res
-      .status(401)
-      .json({ message: 'Unauthorized Access' });
-    return;
-    }
-    
     const newEvent = await Events.create({
       ...req.body,
       members_id: req.session.user_id,
@@ -25,7 +16,7 @@ router.post('/', withAuth, checkIfAdmin, async (req, res) => {
   }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', withAuth, checkIfAdmin, async (req, res) => {
   try {
     const eventData = await Events.destroy({
       where: {
