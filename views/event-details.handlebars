@@ -1,17 +1,13 @@
-<form class="form upcoming-Events" id={{id}}>
-<div>
-<h2>Event Details</h2>
-  <img src="/images/{{picture}}" alt="{{name}}">
-</div>
-<div>
-<h2>{{name}}</h2>
-  <p>{{description}}</p>
-  <p>Event Date: {{format_date date_start}}</p>
-  <p>From {{format_time time_start}} to {{format_time time_end}}</p>
-</div>
-<div> 
-  <button class="btn btn-primary" type="submit">Join</button>
-</div>
-</form>
+<div id="feature">
+  <img id="featureImage" src="/images/{{picture}}" alt="{{name}}">
+  <div id="featureDescription">
+    <h2>{{name}}</h2>
+    <p>{{description}}</p>
+    <h3>Event Date: {{format_date date_start}}</h3>
+    <h3>From {{format_time time_start}} to {{format_time time_end}}</h3>
+    <button class="featureJoinButton" id="{{id}}" type="submit">
+      Join The Event ⟶
+    </button>
+  </div>
 
 <script src="/js/signup.js"></script>

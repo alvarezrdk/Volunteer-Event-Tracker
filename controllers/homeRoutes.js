@@ -75,6 +75,27 @@ router.get('/events/:id', async (req, res) => {
   }
 });
 
+router.get('/newevent', async (req, res) => {
+  try {
+    // Get all projects and JOIN with user data
+
+    const eventData = await Events.findAll({
+    });
+
+    // Serialize data so the template can read it
+    const eventVar = eventData.map((event) => event.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('event', { 
+      eventVar, 
+      logged_in: req.session.logged_in,
+      whiteheader: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {

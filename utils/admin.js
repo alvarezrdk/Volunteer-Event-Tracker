@@ -1,9 +1,11 @@
-const checkIfAdmin = (req, res, next) => {
+const checkIfAdmin = async (req, res, next) => {
     // If the user is not logged in, redirect the request to the login route
-    if (res.path.includes("/NewEvent") && !admin) {
-        return res.sendStatus(401)
+    const admin = await Members.findOne({ where: { id: req.session.memberID, role: "admin" } });
+
+    if (admin) {
+        next();
       } else {
-      next();
+      return res.sendStatus(401)
     }};
   
   module.exports = checkIfAdmin;

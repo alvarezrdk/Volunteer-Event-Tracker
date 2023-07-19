@@ -1,4 +1,4 @@
-const newFormHandler = async (event) => {
+const newEventHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#event-name').value.trim();
@@ -6,7 +6,7 @@ const newFormHandler = async (event) => {
   const description = document.querySelector('#event-desc').value.trim();
 
   if (name && needed_volunteers && description) {
-    const response = await fetch(`/api/eventRoutes`, {
+    const response = await fetch(`/api/events`, {
       method: 'POST',
       body: JSON.stringify({ name, needed_volunteers, description }),
       headers: {
@@ -15,7 +15,7 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/events');
     } else {
       alert('Failed to create event');
     }
@@ -40,7 +40,7 @@ const delButtonHandler = async (event) => {
 
 document
   .querySelector('.new-event-form')
-  .addEventListener('submit', newFormHandler);
+  .addEventListener('submit', newEventHandler);
 
 document
   .querySelector('.event-list')
