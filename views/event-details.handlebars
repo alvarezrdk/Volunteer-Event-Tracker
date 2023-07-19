@@ -1,12 +1,17 @@
-<h1>Event Details</h1>
-
-<div class="event-details">
+<form class="form upcoming-Events" id={{id}}>
+<div>
+<h2>Event Details</h2>
   <img src="/images/{{picture}}" alt="{{name}}">
-  <h2>{{name}}</h2>
+</div>
+<div>
+<h2>{{name}}</h2>
   <p>{{description}}</p>
   <p>Event Date: {{format_date date_start}}</p>
   <p>From {{format_time time_start}} to {{format_time time_end}}</p>
-  <button class="btn btn-primary" id="{{id}}" type="submit">signup</button>
 </div>
+<div> 
+  <button class="btn btn-primary" type="submit">Join</button>
+</div>
+</form>
 
 <script src="/js/signup.js"></script>

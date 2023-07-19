@@ -6,15 +6,15 @@ class Assignment extends Model {}
 Assignment.init(
   {
     event_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     member_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     items_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
     },
   },
   {

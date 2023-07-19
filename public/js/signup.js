@@ -1,19 +1,17 @@
 const signupButtonHandler = async (event) => {
   event.preventDefault();
 
-  const eventId = document.querySelector('#id').value.trim();
-  console.log(eventId);
-  const memberId = req.session.memberID;
-  console.log(memberId);
+  const eventId = event.target.id;
+  
   if (eventId) {
     const response = await fetch('/api/signup', {
       method: 'POST',
-      body: JSON.stringify({ eventId, memberId }),
+      body: JSON.stringify({ eventId }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/events/3');
     } else {
       alert(response.statusText);
     }
@@ -22,5 +20,5 @@ const signupButtonHandler = async (event) => {
 
 
 document
-  .querySelector('.event-details')
+  .querySelector('.upcoming-Events')
   .addEventListener('submit', signupButtonHandler);

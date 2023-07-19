@@ -2,7 +2,7 @@ const sequelize = require('../config/connection');
 const membersData = require('./membersData');
 const eventsData = require('./eventsData');
 const assignmentData = require('./assignmentData');
-const itemsData = require('./itemsData');
+// const itemsData = require('./itemsData');
 
 
 const seedDatabase = async () => {
@@ -12,7 +12,7 @@ const seedDatabase = async () => {
 
   await eventsData();
 
-  await itemsData();
+  // await itemsData();
 
   await assignmentData();
 
