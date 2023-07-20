@@ -22,12 +22,21 @@ const eventsData = [
   {
     "name": "Food Drive",
     "description": "Be a beacon of hope in our community! Join our volunteer food drive to combat hunger by collecting and distributing essential supplies to support struggling families. Together, we'll make a tangible difference, fostering a stronger, more caring community where no one goes to bed hungry. Your participation matters – let's unite and be the change we wish to see!",
-    "date_start": "July 25, 2023",
-    "date_end": "July 25, 2023",
+    "date_start": "July 26, 2023",
+    "date_end": "July 26, 2023",
     "time_start": "July 20, 2023",
     "time_end": "July 20, 2023",
     "picture": "food_1.png"
   },
+  {
+    "name": "Animal Shelter Support",
+    "description": "Volunteering your time and love can make a big difference in the lives of these animals, providing essential care and helping them find forever homes. Every moment spent at the shelter is filled with joy and fulfillment as you witness the positive impact you're making. Join us in creating a compassionate community for these furry friends and consider becoming a volunteer today!",
+    "date_start": "July 28, 2023",
+    "date_end": "July 30, 2023",
+    "time_start": "July 28, 2023",
+    "time_end": "July 30, 2023",
+    "picture": "AnimalShelter.jpg"
+  }
 ]
 
 const seedEvents = () => Events.bulkCreate(eventsData);

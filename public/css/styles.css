@@ -87,7 +87,7 @@ a:active {
 }
 
 #feature {
-    height: 850px;
+    height: min-content;
     display: flex;
     padding: 5em;
     padding-top: 17em;
@@ -96,7 +96,7 @@ a:active {
 }
 
 .feature {
-    height: 850px;
+    height: min-content;
     display: flex;
     padding: 5em;
     padding-top: 17em;
@@ -106,6 +106,7 @@ a:active {
 
 #featureImage {
     flex: 1;
+    width: 50%;
     height: auto;
 }
 
@@ -212,7 +213,7 @@ a:active {
 
 #quote h1 {
     font-family: 'Arsenal', sans-serif;
-    font-size: 50px;
+    font-size: 3vw;
     color: var(--lightblue);
 }
 
@@ -279,7 +280,7 @@ form button {
 #notification h1 {
     font-family: 'Arsenal', sans-serif;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 2.5vw;
 }
 
 #eventNotificationSignUp {
@@ -348,6 +349,7 @@ img {
 
 .profileCategory p {
     padding: .5em;
+    font-size: 1.2vw;
 }
 
 .profileImage {
@@ -370,21 +372,25 @@ img {
 
 .profileItem h2 {
     margin-bottom: 1em;
+    font-size: 1vw;
 }
 
 #profileIntroduction h1 {
     padding-bottom: 1em;
+    font-size: 2vw;
 }
 
 #profileIntroduction h2 {
     margin-left: 1em;
     padding-bottom: .5em;
     margin-bottom: 0;
+    font-size: 1.5vw;
 }
 
 .profileAboutMe {
     line-height: 2;
     margin-left: 1em;
+    font-size: 1.3vw;
 }
 
 #profileEvents,
@@ -404,6 +410,7 @@ img {
     padding-left: 2em;
     padding-right: 2em;
     margin-bottom: 1em;
+    font-size: 1.05vw;
 }
 
 .eventCard {
@@ -467,7 +474,7 @@ img {
 #aboutDescription {
     font-family: 'Arsenal', sans-serif;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 4.5vw;
     line-height: 1.5;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -521,20 +528,20 @@ img {
 .sectionTitle h1 {
     font-family: 'Arsenal', sans-serif;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 2.7vw;
 }
 
 .hoursLocation p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     line-height: 2;
-    font-size: 20px;
+    font-size: 1.3vw;
 }
 
 .hoursLocation h2 {
     font-family: 'Arsenal', sans-serif;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 2.7vw;
     padding-top: .5em;
     padding-bottom: .5em;
 }
@@ -552,7 +559,7 @@ img {
 
 #mainJoinVolunteer h1 {
     width: 50%;
-    font-size: 40px;
+    font-size: 2.5vw;
     font-family: 'Arsenal', sans-serif;
     font-weight: 700;
 }
@@ -586,7 +593,7 @@ img {
 #joinDescription {
     font-family: 'Arsenal', sans-serif;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 2.7vw;
     line-height: 1.5;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -641,10 +648,11 @@ img {
     padding: 1em;
     font-weight: 300;
     line-height: 2;
+    font-size: 1.3vw;
 }
 
 .eventJoin {
-    font-size: 20px;
+    font-size: 1vw;
     font-family: 'Arsenal', sans-serif;
     font-weight: 700;
     font-style: italic;
@@ -795,6 +803,10 @@ input::file-selector-button {
 
 #createEventDescription {
     width: 90%;
+}
+
+.event-submit-btn, .event-remove-btn {
+    cursor: pointer;
 }
 
 #event-name {
