@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Events, Members } = require('../models');
+const { Events, Members, Assignment } = require('../models');
 const checkIfAdmin = require('../utils/admin');
 const withAuth = require('../utils/auth');
 
@@ -100,20 +100,36 @@ router.get('/newevent', withAuth, checkIfAdmin, async (req, res) => {
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    console.log(req.session.memberID)
     const membersData = await Members.findByPk(req.session.memberID, {
       attributes: { exclude: ['password'] },
-      // include: [{ model: Events }],
-    const memberData = await Members.findByPk(req.session.memberID, {
-      // attributes: { exclude: ['password'] },
-      // include: [{ model: Events }],
     });
-console.log(membersData)
-    const memberVar = membersData.get({ plain: true });
 
+    const assignmentsData = await Assignment.findAll({
+      where: { 
+      member_id: req.session.memberID
+    }
+    });
+    
+    console.log(assignmentsData);
+
+    const eventsData = await Events.findAll({
+      where: {
+      id: 3
+      }
+    });
+
+    console.log(eventsData);
+
+    const memberRender = membersData.get({ plain: true });
+    const assignmentRender = assignmentsData.map((event) => event.get({ plain: true }));
+    const eventsRender = eventsData.map((event) => event.get({ plain: true }));
+    
+    
     res.render('profile', {
-   memberData: memberVar,
-      logged_in: true
+    memberData: memberRender,
+    assignmentData: assignmentRender,
+    eventData: eventsRender,
+    logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);

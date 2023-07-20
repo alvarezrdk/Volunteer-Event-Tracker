@@ -20,7 +20,7 @@ Members.init(
       allowNull: false,
     },
     dob: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
     },
     gender: {
       type: DataTypes.STRING,
