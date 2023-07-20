@@ -809,30 +809,6 @@ input::file-selector-button {
     cursor: pointer;
 }
 
-#event-name {
-}
-
 #event-desc {
     width: 100%;
-}
-
-#event-start-date {
-}
-
-#event-end-date {
-}
-
-#event-start-time {
-}
-
-#event-end-time {
-}
-
-#event-img {
-}
-
-.event-submit-btn {
-}
-
-.event-remove-btn {
 }

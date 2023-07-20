@@ -5,10 +5,14 @@
       <label for="event-name">Event Name:</label><br>
       <input class="form-input" type="text" id="event-name" name="event-name" />
     </div>
-    <div class="form-group">
+    {{!-- <div class="form-group">
       <label for="event-image-signup">Event Picture:</label><br>
       <input id="event-image-signup" type="file" accept="image/jpeg, image/png, image/jpg">
       <output></output>
+    </div> --}}
+    <div class="form-group">
+      <label for="event-img">Event Image Link:</label>
+      <input class="form-input" type="text" id="event-img" name="event-img" />
     </div>
     <div class="form-group" id="createEventDescription">
       <label for="event-desc">Event Description:</label><br>
@@ -16,25 +20,25 @@
     </div>
     <div class="form-group">
       <label for="event-start-date">Event Start Date:</label><br>
-      <input class="form-input" type="text" id="event-start-date" name="event-start-date" />
+      <input class="form-input" type="date" id="event-start-date" name="event-start-date" />
     </div>
     <div class="form-group">
       <label for="event-start-time">Event Start Time:</label><br>
-      <input class="form-input" type="text" id="event-start-time" name="event-start-time" />
+      <input class="form-input" type="datetime-local" id="event-start-time" name="event-start-time" />
     </div>
     <div class="form-group">
       <label for="event-end-date">Event End Date:</label><br>
-      <input class="form-input" type="text" id="event-end-date" name="event-end-date" />
+      <input class="form-input" type="date" id="event-end-date" name="event-end-date" />
     </div>
     <div class="form-group">
       <label for="event-end-time">Event End Time:</label><br>
-      <input class="form-input" type="text" id="event-end-time" name="event-end-time" />
+      <input class="form-input" type="datetime-local" id="event-end-time" name="event-end-time" />
     </div>
     <div class="form-group">
       <button type="submit" class="event-submit-btn">Create</button>
     </div>
-    <div class="form-group">
+    {{!-- <div class="form-group">
       <button type="submit" class="event-remove-btn">Destroy</button>
-    </div>
+    </div> --}}
 </div>
 <script src="/js/profile.js"></script>
