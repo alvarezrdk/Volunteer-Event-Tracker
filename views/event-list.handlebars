@@ -10,9 +10,9 @@
                 <div class="eventDescription">
                         <h2>{{event.name}}</h2>
                         <p>{{event.description}}</p>
-                        <button id="{{id}}" type="submit" class="eventJoin">
-                                Join The Event ⟶
-                        </button>
+                        <a href="/events/{{id}}" id="{{id}}" type="submit" class="eventJoin">
+                                View This Event ⟶
+                        </a>
                 </div>
         </div>
         {{/each }}

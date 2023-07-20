@@ -90,7 +90,6 @@ router.get('/newevent', withAuth, checkIfAdmin, async (req, res) => {
     res.render('event', { 
       eventVar, 
       logged_in: req.session.logged_in,
-      whiteheader: true,
     });
   } catch (err) {
     res.status(500).json(err);
