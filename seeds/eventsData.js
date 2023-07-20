@@ -2,7 +2,7 @@ const { Events } = require('../models');
 
 const eventsData = [
   {
-    "name": "Beach Cleaning",
+    "name": "Beach Clean Up",
     "description": "Join us for a rewarding volunteer beach clean-up! Help us protect marine life and preserve the stunning coastline. With gloves and reusable bags in hand, we'll unite as a community to remove litter and plastic waste threatening the delicate ecosystem. Make a difference, connect with like-minded individuals, and create a cleaner, greener tomorrow, one step at a time!",
     "date_start": "2023-07-20",
     "date_end": "2023-07-20",
@@ -11,7 +11,7 @@ const eventsData = [
     "picture": "Beach Cleanup.jpg"
   },
   {
-    "name": "High School Prom",
+    "name": "Prom Chaperone",
     "description": "Volunteer as a prom chaperone and be part of an unforgettable night for high school students! Your role is essential in ensuring a safe and enjoyable event. Dance, offer support, and be a friendly presence throughout the evening. Your care and guidance will create lasting memories for the attendees and reassure parents. Join us in making this prom an exceptional experience filled with laughter and camaraderie.",
     "date_start": "2023-07-23",
     "date_end": "2023-07-23",
