@@ -19,20 +19,18 @@ Events.init(
       type: DataTypes.TEXT,
     },
     date_start: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
     date_end: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
     },
     time_start: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
     time_end: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
     },
     picture: {
       type: DataTypes.STRING,
