@@ -100,15 +100,16 @@ router.get('/newevent', withAuth, checkIfAdmin, async (req, res) => {
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const membersData = await Members.findByPk(req.session.user_id, {
+    console.log(req.session.memberID)
+    const membersData = await Members.findByPk(req.session.memberID, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Events }],
+      // include: [{ model: Events }],
     });
-
-    const memberVar = memberData.get({ plain: true });
+console.log(membersData)
+    const memberVar = membersData.get({ plain: true });
 
     res.render('profile', {
-      ...memberVar,
+   memberData: memberVar,
       logged_in: true
     });
   } catch (err) {

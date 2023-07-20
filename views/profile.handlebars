@@ -1,5 +1,5 @@
 
- <h2>Welcome, {{name}}!</h2>
+ <h2>Welcome, {{memberData.first_name}}!</h2>
     <div id="profile">
             <h1>Profile</h1>
             <div class="profileCategory" id="profilePersonal">
@@ -21,14 +21,14 @@
                     <p>{{memberData.email}}</p>
                 </div>
             </div>
-            {{#if currentEvents.length}}
+            {{!-- {{#if currentEvents.length|event }}
             <h1>Current Volunteer Events</h1>
             <div class="profileCategory" id="profileEvents">
                 {{#each currentEvents as |event|}}
                     <div class="eventCard">
                         <img src="{{event.image}}">
                         <div class="eventDateCard">
-                         <h2>{{event.name}}</h2>
+                         <h2>{{name}}</h2>
                          <h2>{{event.day}}</h2>
                          <h2>{{event.month}}</h2>
                          <h3>{{event.date}}</h3>
@@ -51,6 +51,6 @@
                 </div>
                 {{/each}}
             </div>
-            {{/if}}
+            {{/if}} --}}
             
 <script src="/js/profile.js"></script>
