@@ -95,6 +95,15 @@ a:active {
     background-color: var(--sand);
 }
 
+.feature {
+    height: 850px;
+    display: flex;
+    padding: 5em;
+    padding-top: 17em;
+    margin-top: -12em;
+    background-color: var(--sand);
+}
+
 #featureImage {
     flex: 1;
     height: auto;

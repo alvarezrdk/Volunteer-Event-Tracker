@@ -3,7 +3,7 @@ const { Events } = require('../models');
 const eventsData = [
   {
     "name": "Beach Cleaning",
-    "description": "Join us for a rewarding volunteer beach clean-up! Help us protect marine life and preserve the stunning coastline. With gloves and reusable bags in hand, we'll unite as a community to remove litter and plastic waste threatening the delicate ecosystem. Make a difference, connect with like-minded individuals, and create a cleaner, greener tomorrow, one step at a time!.",
+    "description": "Join us for a rewarding volunteer beach clean-up! Help us protect marine life and preserve the stunning coastline. With gloves and reusable bags in hand, we'll unite as a community to remove litter and plastic waste threatening the delicate ecosystem. Make a difference, connect with like-minded individuals, and create a cleaner, greener tomorrow, one step at a time!",
     "date_start": "July 20, 2023",
     "date_end": "July 20, 2023",
     "time_start": "July 20, 2023",
