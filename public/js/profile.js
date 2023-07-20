@@ -10,16 +10,17 @@ const newEventHandler = async (event) => {
   const time_end = document.querySelector('#event-end-time').value.trim();
   const picture = document.querySelector('#event-img').value.trim();
   console.log(name, description, date_start, date_end, time_start, time_end, picture)
-  
+
+
   if (name && description && date_start && date_end && time_start && time_end && picture) {
     const response = await fetch(`/api/events`, {
       method: 'POST',
-      body: JSON.stringify({name, description, date_start, date_end, time_start, time_end, picture}),
+      body: JSON.stringify({ name, description, date_start, date_end, time_start, time_end, picture }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
-
+    console.log(response);
     if (response.ok) {
       document.location.replace('/events');
     } else {

@@ -10,7 +10,6 @@ router.post('/', withAuth, checkIfAdmin, async (req, res) => {
     const newEvent = await Events.create(
       req.body
     );
-    console.log(newEvent);
     res.status(200).json(newEvent);
   } catch (err) {
     res.status(500).json(err);
