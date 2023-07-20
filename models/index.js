@@ -1,5 +1,5 @@
-const Assignment = require('./Assignment');
-const Events = require('./Events');
+const Assignment = require('./assignment');
+const Events = require('./events');
 const Members = require("./members");
 
 // Events.hasMany(Assignment, {
