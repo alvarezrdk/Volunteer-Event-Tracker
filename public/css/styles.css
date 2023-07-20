@@ -87,7 +87,7 @@ a:active {
 }
 
 #feature {
-    height: 700px;
+    height: 850px;
     display: flex;
     padding: 5em;
     padding-top: 17em;
@@ -273,6 +273,27 @@ form button {
     font-size: 40px;
 }
 
+#eventNotificationSignUp {
+    padding: 1em;
+    width: 100%;
+    display: flex;
+}
+
+#eventNotificationSignUp input {
+    flex: 2;
+    padding: 1em;
+    border: none;
+    margin: 0.5em;
+}
+
+#eventNotificationSignUp button {
+    flex: 1;
+    padding: 1em;
+    border: none;
+    margin: 0.5em;
+    background-color: var(--lightblue);
+}
+
 #socials {
     position: relative;
 }
@@ -304,29 +325,76 @@ img {
 #profile {
     background-color: var(--sand);
     padding: 5em;
+    padding-top: 12em;
+    margin-top: -12em;
 }
 
 .profileCategory {
     height: min-content;
     padding: 1em;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    display: flex;
 }
 
 .profileCategory p {
     padding: .5em;
 }
 
-#profilePersonal {
-    display: flex;
+.profileImage {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: var(--darkblue) solid 5px;
+}
+
+.profileImageContainer {
+    width: min-content;
+    margin-right: 3em;
 }
 
 .profileItem {
     flex: 1;
+    border-left: var(--lightbrown) solid 2px;
+    padding-left: 1em;
+}
+
+.profileItem h2 {
+    margin-bottom: 1em;
+}
+
+#profileIntroduction h1 {
+    padding-bottom: 1em;
+}
+
+#profileIntroduction h2 {
+    margin-left: 1em;
+    padding-bottom: .5em;
+    margin-bottom: 0;
+}
+
+.profileAboutMe {
+    line-height: 2;
+    margin-left: 1em;
 }
 
 #profileEvents,
 #previousEvents {
     display: flex;
     flex-wrap: wrap;
+}
+
+#newEventButton {
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 400;
+    background-color: var(--darkblue);
+    color: whitesmoke;
+    display: inline-block;
+    margin-top: 1em;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-bottom: 1em;
 }
 
 .eventCard {
@@ -639,11 +707,12 @@ img {
 .loginFormContainer {
     flex: 1;
     padding: 5em;
+    padding-right: 1em;
     border-right: var(--lightbrown) solid 2px;
 }
 
 .signUpFormContainer{
-    flex: 2;
+    flex: 4;
     padding: 5em;
 }
 
@@ -660,11 +729,70 @@ img {
     width: 50%;
 }
 
+.form-group-login {
+    width: 100%;
+}
+
+.form-input {
+    width: 80%;
+    border: var(--lightbrown) solid 1px;
+}
+
+#about-me-signup-container {
+    width: 100%
+}
+
+#about-me-signup {
+    width: 90%;
+}
+
+#image-input-signup {
+    padding: 0;
+}
+
+input::file-selector-button {
+    padding: 1.1em;
+    border: none;
+    background-color: var(--lightblue);
+}
+
 /* Create Event Page element IDs */
+
+#createEventPage {
+    background-color: var(--sand);
+    padding: 5em;
+    margin-top: -12em;
+    padding-top: 17em;
+}
+
+#createEventPage h1 {
+    font-weight: 400;
+}
+
+#createEventForm {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.createEventItem {
+    flex: 1;
+    border-left: var(--lightbrown) solid 2px;
+    padding-left: 1em;
+}
+
+#event-image-signup {
+    padding: 0;
+}
+
+#createEventDescription {
+    width: 90%;
+}
+
 #event-name {
 }
 
 #event-desc {
+    width: 100%;
 }
 
 #event-start-date {
