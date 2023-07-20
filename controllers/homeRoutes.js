@@ -104,6 +104,9 @@ router.get('/profile', withAuth, async (req, res) => {
     const membersData = await Members.findByPk(req.session.memberID, {
       attributes: { exclude: ['password'] },
       // include: [{ model: Events }],
+    const memberData = await Members.findByPk(req.session.memberID, {
+      // attributes: { exclude: ['password'] },
+      // include: [{ model: Events }],
     });
 console.log(membersData)
     const memberVar = membersData.get({ plain: true });
