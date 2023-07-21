@@ -9,4 +9,4 @@
 * https://github.com/Anthonycodinach/Volunteer-Event-Tracker 
 
 ## Heroku Live URL
-*  https://pacific-wildwood-17680-8e953e055e35/ 
+*  https://pacific-wildwood-17680-8e953e055e35.herokuapp.com/
