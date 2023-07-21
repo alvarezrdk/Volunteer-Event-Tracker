@@ -10,3 +10,6 @@
 
 ## Heroku Live URL
 *  https://pacific-wildwood-17680-8e953e055e35.herokuapp.com/
+
+## Screenshot
+![screenshot](./public/images/Screenshot%202023-07-21%20at%2012.00.51%20AM.png)
