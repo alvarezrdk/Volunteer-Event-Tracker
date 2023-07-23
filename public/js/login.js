@@ -25,13 +25,21 @@ const loginFormHandler = async (event) => {
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#name-signup').value.trim();
+  const first_name = document.querySelector('#first-name-signup').value.trim();
+  const last_name = document.querySelector('#last-name-signup').value.trim();
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
-  if (name && email && password) {
+  const phone_number = document.querySelector('#phone-number-signup').value.trim();
+  const location = document.querySelector('#location-signup').value.trim();
+  const about_me = document.querySelector('#about-me-signup').value.trim();
+  const birthday = document.querySelector('#birthday-signup').value.trim();
+  const profile_picture = document.querySelector('#image-input-signup').value.trim();
+
+
+  if (first_name && last_name && email && password && phone_number && location && about_me && birthday && profile_picture) {
     const response = await fetch('/api/member/register', {
       method: 'POST',
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({ first_name, last_Name, email, password, phone_number, location, about_me, birthday, profile_picture }),
       headers: { 'Content-Type': 'application/json' },
     });
     if (response.ok) {
