@@ -19,7 +19,7 @@ Members.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    dob: {
+    birthday: {
       type: DataTypes.DATE,
     },
     gender: {
@@ -36,6 +36,18 @@ Members.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    phone_number: {
+      type: DataTypes.STRING
+    },
+    about_me: {
+      type: DataTypes.TEXT
+    },
+    profile_picture: {
+      type: DataTypes.STRING
+    },
+    location: {
+      type: DataTypes.INTEGER
+    }
   },
   {
     sequelize,
