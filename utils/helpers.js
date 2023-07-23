@@ -28,7 +28,7 @@ module.exports = {
 
   format_time: (date) => {
     const jsDate = new Date(date);
-    return jsDate.toLocaleTimeString("en-US", { hour: '2-digit', minute: '2-digit', timeZone: 'America/New_York'});
+    return jsDate.toLocaleTimeString("en-US", { hour: '2-digit', minute: '2-digit'});
   },
 
   format_amount: (amount) => {
