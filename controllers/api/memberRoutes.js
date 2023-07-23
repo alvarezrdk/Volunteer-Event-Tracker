@@ -13,7 +13,7 @@ router.post('/register', async (req, res) => {
 
     const memberData = await Members.findOne({where: { email: req.body.email}});
 
-      memberId = memberData.id;
+      //memberId = memberData.id;
       req.session.save(() => {
       req.session.logged_in = true;
       req.session.memberID = memberData.id;
@@ -29,9 +29,9 @@ router.post('/login', async (req, res) => {
     
     const memberData = await Members.findOne({ where: { email: req.body.email } });
 
-    console.log(memberData.first_name);
-    console.log(memberData.id);
-
+    // console.log(memberData.first_name);
+    // console.log(memberData.id);
+    const pass = req.body.password
     if (!memberData) {
       res
         .status(400)
@@ -47,6 +47,13 @@ router.post('/login', async (req, res) => {
     //     .json({ message: 'Incorrect email or password. Please try again!' });
     //   return;
     // }
+    if (memberData.password != pass) {
+      console.log("pass validated");
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
+    }
     
       req.session.save(() => {
       req.session.memberID = memberData.id;
