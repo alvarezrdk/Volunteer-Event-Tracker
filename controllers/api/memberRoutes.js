@@ -5,10 +5,15 @@ const { Members } = require('../../models');
 router.post('/register', async (req, res) => {
   try {
     const dbmemberData = await Members.create({
-      first_name: req.body.name,
-      last_name: req.body.name,
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
       email: req.body.email,
       password: req.body.password,
+      location: req.body.location,
+      birthday: req.body.birthday,
+      about_me: req.body.about_me,
+      profile_picture: req.body.profile_picture,
+      phone_number: req.body.phone_number,
     });
 
     const memberData = await Members.findOne({where: { email: req.body.email}});
