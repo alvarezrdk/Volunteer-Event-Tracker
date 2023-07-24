@@ -21,12 +21,15 @@ Members.init(
     },
     birthday: {
       type: DataTypes.DATE,
+      allowNull: true,
     },
     gender: {
       type: DataTypes.STRING,
+      allowNull: true,
     },
     email: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     password: {
       type: DataTypes.STRING,
@@ -37,16 +40,20 @@ Members.init(
       allowNull: true,
     },
     phone_number: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     about_me: {
-      type: DataTypes.TEXT
+      type: DataTypes.TEXT,
+      allowNull: true,
     },
     profile_picture: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     location: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      allowNull: false,
     }
   },
   {
