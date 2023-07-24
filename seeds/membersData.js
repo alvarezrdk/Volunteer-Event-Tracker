@@ -8,7 +8,9 @@ const membersData = [
     "gender": "Male",
     "email": "carroz@hotmail.com",
     "password": "password12345",
-    "role": "admin"
+    "role": "admin",
+    "phone_number": "7863529835",
+    "location": "33143"
   }
 ];
 
