@@ -1,21 +1,18 @@
 <div id="profile">
     <div class="profileCategory">
         <div class="profileImageContainer">
-            <img class="profileImage" src="/Photos/Volunteer 2.jpg">
+            <img class="profileImage" src="{{memberData.profile_picture}}">
         </div>
         <div class="profileItem" id="profileIntroduction">
             <h1>{{memberData.first_name}} {{memberData.last_name}}</h1>
             <h2>About Me</h2>
-            <p class="profileAboutMe">As an enthusiastic and compassionate individual, I am deeply committed to making a
-                positive impact
-                through volunteering. With a diverse set of skills and a passion for helping others, I strive to
-                contribute to meaningful projects and create a better world for everyone.</p>
+            <p class="profileAboutMe">{{memberData.about_me}}</p>
         </div>
     </div>
     <div class="profileCategory">
         <div class="profileItem">
             <h2>Location</h2>
-            <p>Miami, Florida</p>
+            <p>{{memberData.location}}</p>
         </div>
         <div class="profileItem">
             <h2>Skills</h2>
@@ -23,20 +20,53 @@
         </div>
         <div class="profileItem">
             <h2>Birthday</h2>
-            <p>{{memberData.birthday}} April 1st, 2023</p>
+            <p>{{memberData.birthday}} </p>
         </div>
         <div class="profileItem">
             <h2>Total Hours</h2>
-            <p>{{memberData.totalHours}} 84 hours</p>
+            <p> 84 hours </p>
         </div>
 
         <div class="profileItem">
             <h2>Contact Info</h2>
-            <p>{{memberData.phone_number}}(999) 999-9999</p>
+            <p>{{memberData.phone_number}}</p>
             <p>{{memberData.email}}</p>
         </div>
     </div>
-    <h1>Upcoming Events</h1>
+
+     {{!-- {{#if currentEvents.length|event }}
+    <h1>My Current Volunteer Events</h1>
+    <div class="profileCategory" id="profileEvents">
+        {{#each currentEvents as |event|}}
+        <div class="eventCard">
+            <img src="{{event.picture}}">
+            <div class="eventDateCard">
+                <h2>{{event.name}}</h2>
+                <h3>{{event.date_start}}</h3>
+                <h3>{{event.date_end}}</h3>
+                <h3>{{event.time_start}}</h3>
+                <h3>{{event.time_end}}</h3>
+            </div>
+            {{/each}}
+        </div>
+
+        {{/if}}
+        {{#if pastEvents.length}}
+        <h1>Past Volunteer Events</h1>
+        <div class="profileCategory" id="previousEvents">
+            {{#each pastEvents as |event|}}
+            <div class="eventCard">
+                <img src="{{event.picture}}">
+                <div class="eventDateCard">
+                    <h2>{{event.name}}</h2>
+                    <h2>{{event.date_start}}</h2>
+                    <h2>{{event.date_end}}</h2>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/if}} --}}
+
     <div class="profileCategory">
         <div class="profileImageContainer">
             <img class="profileImage" src="/images/Beach Cleanup.jpg">
@@ -107,36 +137,4 @@
             <a id="newEventButton" href="/newevent">New Event</a>
         </div>
     </div>
-    {{!-- {{#if currentEvents.length|event }}
-    <h1>Current Volunteer Events</h1>
-    <div class="profileCategory" id="profileEvents">
-        {{#each currentEvents as |event|}}
-        <div class="eventCard">
-            <img src="{{event.image}}">
-            <div class="eventDateCard">
-                <h2>{{name}}</h2>
-                <h2>{{event.day}}</h2>
-                <h2>{{event.month}}</h2>
-                <h3>{{event.date}}</h3>
-            </div>
-            {{/each}}
-        </div>
-        {{/if}}
-        {{#if pastEvents.length}}
-        <h1>Past Volunteer Events</h1>
-        <div class="profileCategory" id="previousEvents">
-            {{#each pastEvents as |event|}}
-            <div class="eventCard">
-                <img src="{{event.image}}">
-                <div class="eventDateCard">
-                    <h2>{{event.name}}</h2>
-                    <h2>{{event.date}}</h2>
-                </div>
-                <h2>{{event.month}}</h2>
-                <h3>{{event.day}}</h3>
-            </div>
-            {{/each}}
-        </div>
-        {{/if}} --}}
-
         <script src="/js/profile.js"></script>

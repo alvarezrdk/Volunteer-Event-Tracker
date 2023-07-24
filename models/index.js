@@ -11,4 +11,13 @@ const Members = require("./members");
 //   foreignKey: 'event_id'
 // });
 
+Events.hasMany(Members, {
+    foreignKey: 'event_id',
+    onDelete: 'CASCADE'
+});
+
+Members.belongsTo(Events, {
+      foreignKey: 'event_id'
+});
+
 module.exports = { Assignment, Events, Members};
