@@ -19,6 +19,7 @@ router.post('/register', async (req, res) => {
     const memberData = await Members.findOne({where: { email: req.body.email}});
 
       //memberId = memberData.id;
+
       req.session.save(() => {
       req.session.logged_in = true;
       req.session.memberID = memberData.id;
@@ -37,6 +38,7 @@ router.post('/login', async (req, res) => {
     // console.log(memberData.first_name);
     // console.log(memberData.id);
     const pass = req.body.password
+
     if (!memberData) {
       res
         .status(400)
@@ -52,6 +54,7 @@ router.post('/login', async (req, res) => {
     //     .json({ message: 'Incorrect email or password. Please try again!' });
     //   return;
     // }
+
     if (memberData.password != pass) {
       console.log("pass validated");
       res
@@ -63,7 +66,7 @@ router.post('/login', async (req, res) => {
       req.session.save(() => {
       req.session.memberID = memberData.id;
       req.session.logged_in = true;
-      
+            
       res
       .status(200)
       .json({ user: memberData, message: 'You are now logged in!' });

@@ -27,6 +27,7 @@
             <p> 84 hours </p>
         </div>
 
+
         <div class="profileItem">
             <h2>Contact Info</h2>
             <p>{{memberData.phone_number}}</p>
@@ -138,3 +139,37 @@
         </div>
     </div>
         <script src="/js/profile.js"></script>
+
+ <h2>Welcome, {{memberData.first_name}}!!!</h2>
+    <div id="profile">
+            <h1>Profile</h1>
+            <div class="profileCategory" id="profilePersonal">
+                <div class="profileItem">
+                    <h2>Name</h2>
+                     <p>{{memberData.first_name}}</p>
+                     <p>{{memberData.role}}</p>
+                </div>
+                <div class="profileItem">
+                    <h2>Gender</h2>
+                    <p>{{memberData.gender}}</p>
+                </div>
+                <div class="profileItem">
+                    <h2>Contact Info</h2>
+                    <p>{{memberData.email}}</p>
+                </div>
+            </div>
+            {{!-- {{#if eventsData }} --}}
+            <h1>Current Volunteer Events</h1>
+            <div class="profileCategory" id="profileEvents">
+                {{#each eventData}}
+                    <div class="eventCard">
+                        <img src="/images/{{picture}}" alt="{{name}}">
+                         <h2>{{name}}</h2>
+                         <h2>{{format_date date_start}}</h2>
+                    </div>
+                {{/each}}  
+            </div>
+            {{!-- {{else}} --}}
+    </div>        
+            
+{{!-- <script src="/js/profile.js"></script> --}}
