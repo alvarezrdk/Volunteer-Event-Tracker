@@ -1,13 +1,34 @@
 module.exports = {
 
   format_date: (date) => {
-    return `${new Date(date).getMonth()}/${new Date(date).getDate()}/${
-      new Date(date).getFullYear()
-    }`;
+    const jsDate = new Date(date);
+    return jsDate.toLocaleDateString("en-US", {
+      timeZone: 'UTC',
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  },
+
+  format_date_card_month: (date) => {
+    const jsDate = new Date(date);
+    return jsDate.toLocaleDateString("en-US", {
+      timeZone: 'UTC',
+      month: "short",
+    });
+  },
+
+  format_date_card_day: (date) => {
+    const jsDate = new Date(date);
+    return jsDate.toLocaleDateString("en-US", {
+      timeZone: 'UTC',
+      day: "numeric",
+    });
   },
 
   format_time: (date) => {
-    return date.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+    const jsDate = new Date(date);
+    return jsDate.toLocaleTimeString("en-US", { hour: '2-digit', minute: '2-digit'});
   },
 
   format_amount: (amount) => {

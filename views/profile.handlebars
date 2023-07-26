@@ -1,3 +1,144 @@
+<div id="profile">
+    <div class="profileCategory">
+        <div class="profileImageContainer">
+            <img class="profileImage" src="{{memberData.profile_picture}}">
+        </div>
+        <div class="profileItem" id="profileIntroduction">
+            <h1>{{memberData.first_name}} {{memberData.last_name}}</h1>
+            <h2>About Me</h2>
+            <p class="profileAboutMe">{{memberData.about_me}}</p>
+        </div>
+    </div>
+    <div class="profileCategory">
+        <div class="profileItem">
+            <h2>Location</h2>
+            <p>{{memberData.location}}</p>
+        </div>
+        <div class="profileItem">
+            <h2>Skills</h2>
+            <p>Great Communicator and Listener</p>
+        </div>
+        <div class="profileItem">
+            <h2>Birthday</h2>
+            <p>{{memberData.birthday}} </p>
+        </div>
+        <div class="profileItem">
+            <h2>Total Hours</h2>
+            <p> 84 hours </p>
+        </div>
+
+
+        <div class="profileItem">
+            <h2>Contact Info</h2>
+            <p>{{memberData.phone_number}}</p>
+            <p>{{memberData.email}}</p>
+        </div>
+    </div>
+
+     {{!-- {{#if currentEvents.length|event }}
+    <h1>My Current Volunteer Events</h1>
+    <div class="profileCategory" id="profileEvents">
+        {{#each currentEvents as |event|}}
+        <div class="eventCard">
+            <img src="{{event.picture}}">
+            <div class="eventDateCard">
+                <h2>{{event.name}}</h2>
+                <h3>{{event.date_start}}</h3>
+                <h3>{{event.date_end}}</h3>
+                <h3>{{event.time_start}}</h3>
+                <h3>{{event.time_end}}</h3>
+            </div>
+            {{/each}}
+        </div>
+
+        {{/if}}
+        {{#if pastEvents.length}}
+        <h1>Past Volunteer Events</h1>
+        <div class="profileCategory" id="previousEvents">
+            {{#each pastEvents as |event|}}
+            <div class="eventCard">
+                <img src="{{event.picture}}">
+                <div class="eventDateCard">
+                    <h2>{{event.name}}</h2>
+                    <h2>{{event.date_start}}</h2>
+                    <h2>{{event.date_end}}</h2>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/if}} --}}
+
+    <div class="profileCategory">
+        <div class="profileImageContainer">
+            <img class="profileImage" src="/images/Beach Cleanup.jpg">
+        </div>
+        <div class="profileItem" id="profileIntroduction">
+            <h1>Beach Clean Up</h1>
+            <h2>July 20th, 2023</h2>
+            <p class="profileAboutMe">Join us for a rewarding volunteer beach clean-up! Help us protect marine life and
+                preserve the stunning coastline. With gloves and reusable bags in hand, we'll unite as a community to
+                remove litter and plastic waste threatening the delicate ecosystem. Make a difference, connect with
+                like-minded individuals, and create a cleaner, greener tomorrow, one step at a time!</p>
+        </div>
+    </div>
+    <div class="profileCategory">
+        <div class="profileImageContainer">
+            <img class="profileImage" src="/images/food_1.png">
+        </div>
+        <div class="profileItem" id="profileIntroduction">
+            <h1>Food Drive</h1>
+            <h2>July 25th, 2023</h2>
+            <p class="profileAboutMe">Be a beacon of hope in our community! Join our volunteer food drive to combat hunger by collecting and distributing essential supplies to support struggling families. Together, we'll make a tangible difference, fostering a stronger, more caring community where no one goes to bed hungry. Your participation matters – let's unite and be the change we wish to see!</p>
+        </div>
+    </div>
+
+    <h1>Previous Events</h1>
+    <div class="profileCategory">
+        <div class="profileImageContainer">
+            <img class="profileImage" src="/images/volunteerCoach.jpg">
+        </div>
+        <div class="profileItem" id="profileIntroduction">
+            <h1>Youth Sports Coach</h1>
+            <h2>June 17th, 2023</h2>
+            <p class="profileAboutMe">Empower young athletes and shape future champions as a youth sports coach. Your
+                passion for sports can make a significant impact on their lives, fostering teamwork and valuable life
+                skills. Join us today to inspire and be inspired on and off the field. Volunteer as a youth sports coach
+                and make a difference!</p>
+        </div>
+    </div>
+    <div class="profileCategory">
+        <div class="profileImageContainer">
+            <img class="profileImage" src="/images/volunteerHospice.jpg">
+        </div>
+        <div class="profileItem" id="profileIntroduction">
+            <h1>Hospice Care</h1>
+            <h2>June 25th, 2023</h2>
+            <p class="profileAboutMe">Volunteer at a hospice care center and bring comfort to those in need. Your
+                presence can make a difference in the lives of terminally ill patients and their families. Join us in
+                offering compassion and support during their challenging times. Make a meaningful impact, volunteer
+                today!</p>
+        </div>
+    </div>
+    <div class="profileCategory">
+        <div class="profileImageContainer">
+            <img class="profileImage" src="/images/communityClean.jpg">
+        </div>
+        <div class="profileItem" id="profileIntroduction">
+            <h1>Community Clean Up</h1>
+            <h2>June 30th, 2023</h2>
+            <p class="profileAboutMe">Make a positive impact on your community by volunteering for a community cleanup
+                event. Join us to protect the environment, preserve wildlife habitats, and create a cleaner, greener
+                world. Your efforts matter, so grab some gloves and join the cause. Volunteer today and be part of the
+                change!</p>
+        </div>
+    </div>
+    <div class="profileCategory">
+        <div class="profileItem">
+            <h2>Create a New Event</h2>
+            <a id="newEventButton" href="/newevent">New Event</a>
+        </div>
+    </div>
+        <script src="/js/profile.js"></script>
 
  <h2>Welcome, {{memberData.first_name}}!!!</h2>
     <div id="profile">

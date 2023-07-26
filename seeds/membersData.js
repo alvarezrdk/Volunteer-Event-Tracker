@@ -4,11 +4,13 @@ const membersData = [
   {
     "first_name": "Ruben",
     "last_name": "Alvarez",
-    "dob": "03/09/1952",
+    "birthday": "03/09/1952",
     "gender": "Male",
     "email": "carroz@hotmail.com",
     "password": "password12345",
-    "role": "admin"
+    "role": "admin",
+    "phone_number": "7863529835",
+    "location": "33143"
   }
 ];
 
