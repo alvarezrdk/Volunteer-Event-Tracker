@@ -106,12 +106,17 @@ router.get('/profile', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       // include: [{ model: Events }],
     });
-console.log(membersData)
     const memberVar = membersData.get({ plain: true });
+    const eventData = await Events.findAll({
+    });
+
+    // Serialize data so the template can read it
+    const eventVar = eventData.map((event) => event.get({ plain: true }));
 
     res.render('profile', {
    memberData: memberVar,
-      logged_in: true
+      logged_in: true,
+      eventsList: eventVar
     });
   } catch (err) {
     res.status(500).json(err);
