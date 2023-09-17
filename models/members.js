@@ -24,9 +24,11 @@ Members.init(
     },
     gender: {
       type: DataTypes.STRING,
+      allowNull: true,
     },
     email: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     password: {
       type: DataTypes.STRING,
@@ -36,6 +38,22 @@ Members.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    phone_number: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    about_me: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
+    profile_picture: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    location: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    }
   },
   {
     sequelize,

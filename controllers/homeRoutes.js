@@ -49,6 +49,7 @@ router.get('/events', async (req, res) => {
     // Get all events and JOIN with user data
     const eventData = await Events.findAll()
     const eventsList = eventData.map(event => event.get({plain: true}))
+    console.log(eventsList);
         res.render('event-list', {
           eventsList,
           logged_in: req.session.logged_in
@@ -104,6 +105,7 @@ router.get('/profile', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
     });
 
+
     const assignmentsData = await Assignment.findAll({
       where: { 
       member_id: req.session.memberID
@@ -126,10 +128,12 @@ router.get('/profile', withAuth, async (req, res) => {
     
     
     res.render('profile', {
+
     memberData: memberRender,
     assignmentData: assignmentRender,
     eventData: eventsRender,
     logged_in: true
+
     });
   } catch (err) {
     res.status(500).json(err);

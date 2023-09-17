@@ -1,3 +1,4 @@
+
 const Assignment = require('./Assignment');
 const Events = require('./Events');
 const Members = require('./Members');
@@ -10,5 +11,7 @@ const Members = require('./Members');
 // Assignment.belongsTo(Events, {
 //   foreignKey: 'id'
 // });
+
+
 
 module.exports = { Assignment, Events, Members};

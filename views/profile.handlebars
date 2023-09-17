@@ -1,3 +1,32 @@
+<div id="profile">
+    <div class="profileCategory">
+        <div class="profileImageContainer">
+            <img class="profileImage" src="{{memberData.profile_picture}}">
+        </div>
+        <div class="profileItem" id="profileIntroduction">
+            <h1>{{memberData.first_name}} {{memberData.last_name}}</h1>
+            <h2>About Me</h2>
+            <p class="profileAboutMe">{{memberData.about_me}}</p>
+        </div>
+    </div>
+    <div class="profileCategory">
+        <div class="profileItem">
+            <h2>Location</h2>
+            <p>{{memberData.location}}</p>
+        </div>
+        <div class="profileItem">
+            <h2>Skills</h2>
+            <p>Great Communicator and Listener</p>
+        </div>
+        <div class="profileItem">
+            <h2>Birthday</h2>
+            <p>{{memberData.birthday}} </p>
+        </div>
+        <div class="profileItem">
+            <h2>Total Hours</h2>
+            <p> 84 hours </p>
+        </div>
+
 
  <h2>Welcome, {{memberData.first_name}}!!!</h2>
     <div id="profile">
@@ -32,3 +61,4 @@
     </div>        
             
 {{!-- <script src="/js/profile.js"></script> --}}
+
